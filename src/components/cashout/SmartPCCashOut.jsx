@@ -36,36 +36,36 @@ export const SmartPCCashOut = () => {
       <Modal
         isOpen={isModalOpen}
         onClose={!cashOutResult ? handleClose : undefined}
-        className="!bg-[#050510] border-2 border-cyan-500/50 shadow-[0_0_40px_rgba(0,255,255,0.15)] !rounded-none"
+        className="!bg-[#050510] border-2 border-[#d4af37]/50 shadow-[0_0_40px_rgba(212,175,55,0.15)] !rounded-none"
       >
         {!cashOutResult ? (
           <div className="flex flex-col items-center text-center pt-4 relative px-2">
-            <div className="w-20 h-20 bg-[#050510] border border-cyan-500 shadow-[0_0_20px_rgba(6,182,212,0.4)] flex items-center justify-center mb-6 relative transform rotate-45">
+            <div className="w-20 h-20 bg-[#050510] border border-[#d4af37] shadow-[0_0_20px_rgba(212,175,55,0.4)] flex items-center justify-center mb-6 relative transform rotate-45">
               <div className="transform -rotate-45">
                 <Banknote
                   size={36}
-                  className="text-cyan-400 drop-shadow-[0_0_8px_rgba(6,182,212,0.8)]"
+                  className="text-[#f9d976] drop-shadow-[0_0_8px_rgba(249,217,118,0.8)]"
                 />
               </div>
             </div>
 
-            <h2 className="text-3xl font-black mb-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-fuchsia-500 tracking-[0.1em] uppercase font-mono filter drop-shadow-[0_0_10px_rgba(6,182,212,0.6)]">
+            <h2 className="text-3xl font-black mb-2 text-transparent bg-clip-text bg-gradient-to-r from-[#f9d976] to-[#aa8c2c] tracking-[0.1em] uppercase font-mono filter drop-shadow-[0_0_10px_rgba(212,175,55,0.6)]">
               System Cashout
             </h2>
 
-            <p className="text-cyan-200/60 mb-8 font-mono text-[10px] tracking-widest uppercase">
+            <p className="text-[#f9d976]/60 mb-8 font-mono text-[10px] tracking-widest uppercase">
               Initializing Withdrawal Sequence...
             </p>
 
-            <div className="w-full bg-[#050510] border-l-4 border-r-4 border-cyan-500 p-6 mb-8 relative overflow-hidden group shadow-[inset_0_0_20px_rgba(6,182,212,0.1)]">
+            <div className="w-full bg-[#050510] border-l-4 border-r-4 border-[#d4af37] p-6 mb-8 relative overflow-hidden group shadow-[inset_0_0_20px_rgba(212,175,55,0.1)]">
               {/* Scanline effect */}
-              <div className="absolute inset-0 bg-[linear-gradient(transparent_50%,rgba(0,255,255,0.05)_50%)] bg-[length:100%_4px] pointer-events-none"></div>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400/10 to-transparent group-hover:translate-x-full transition-transform duration-700 -skew-x-12"></div>
+              <div className="absolute inset-0 bg-[linear-gradient(transparent_50%,rgba(212,175,55,0.05)_50%)] bg-[length:100%_4px] pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#d4af37]/10 to-transparent group-hover:translate-x-full transition-transform duration-700 -skew-x-12"></div>
 
-              <div className="text-cyan-400/80 text-[10px] font-bold uppercase tracking-[0.3em] mb-2 font-mono relative z-10">
+              <div className="text-[#f9d976]/80 text-[10px] font-bold uppercase tracking-[0.3em] mb-2 font-mono relative z-10">
                 Available Amount
               </div>
-              <div className="text-5xl font-black text-cyan-300 drop-shadow-[0_0_15px_rgba(6,182,212,0.8)] font-mono tracking-tight relative z-10">
+              <div className="text-5xl font-black text-[#f9d976] drop-shadow-[0_0_15px_rgba(249,217,118,0.8)] font-mono tracking-tight relative z-10">
                 N$ {balance.toFixed(2)}
               </div>
             </div>
@@ -74,15 +74,15 @@ export const SmartPCCashOut = () => {
               <Button
                 variant="secondary"
                 onClick={handleClose}
-                className="flex-1 py-4 text-xs font-mono tracking-[0.2em] uppercase border border-fuchsia-500/50 text-fuchsia-400 hover:bg-fuchsia-500/20 hover:text-fuchsia-300 transition-all !rounded-none shadow-[0_0_15px_rgba(217,70,239,0.1)]"
+                className="flex-1 py-4 text-xs font-mono tracking-[0.2em] uppercase border border-white/20 text-white/70 hover:bg-white/10 hover:text-white transition-all !rounded-none shadow-[0_0_15px_rgba(255,255,255,0.05)]"
               >
                 Abort
               </Button>
               <Button
                 onClick={handleCashOut}
-                className="flex-1 py-4 text-xs font-mono tracking-[0.2em] uppercase bg-cyan-500 text-black border-transparent hover:bg-cyan-400 hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] transition-all !rounded-none"
+                className="flex-1 py-4 text-xs font-mono tracking-[0.2em] uppercase bg-gradient-to-r from-[#aa8c2c] via-[#f9d976] to-[#aa8c2c] text-[#110820] border-transparent hover:brightness-110 hover:shadow-[0_0_30px_rgba(212,175,55,0.6)] transition-all !rounded-none"
               >
-                COnfirm
+                Confirm
               </Button>
             </div>
           </div>

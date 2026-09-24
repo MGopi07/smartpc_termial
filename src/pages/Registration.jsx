@@ -61,7 +61,7 @@ export const Registration = () => {
               className="text-[#d4af37] mb-2 drop-shadow-[0_2px_10px_rgba(212,175,55,0.4)]"
             />
             <h1 className="text-4xl md:text-5xl font-serif tracking-widest text-transparent bg-clip-text bg-gradient-to-b from-[#fff6d6] via-[#d4af37] to-[#aa8c2c] drop-shadow-sm font-semibold text-center uppercase">
-              Winbet
+              Registration  
             </h1>
             {/* <div className="flex items-center gap-4 mt-4 w-full px-8 opacity-70">
               <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-[#d4af37]/40" />
