@@ -9,7 +9,7 @@ export const GameCard = ({ game, onClick, className }) => {
     <div
       onClick={() => onClick(game)}
       className={cn(
-        "game-card relative group aspect-[16/10] w-full rounded-lg cursor-pointer transition-transform duration-300 ease-out overflow-hidden shadow-sm hover:shadow-xl bg-[#1e293b]",
+        "game-card relative group aspect-[4/3] w-full rounded-xl cursor-pointer transition-all duration-300 ease-out overflow-hidden shadow-md hover:shadow-[0_0_20px_rgba(249,115,22,0.25)] hover:border-[#f97316]/50 border border-white/5 bg-[#1b2336] hover:-translate-y-1",
         className,
       )}
     >

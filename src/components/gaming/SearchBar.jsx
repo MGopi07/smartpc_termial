@@ -13,7 +13,7 @@ export const SearchBar = ({ value, onChange }) => {
           value={value}
           onChange={(e) => onChange?.(e.target.value)}
           placeholder="Search"
-          className="w-full bg-[#1e293b]/60 border border-[#334155]/60 rounded-xl py-3 pl-12 pr-4 text-[#f8fafc] placeholder-[#a1a1aa] focus:outline-none focus:border-[#d4af37]/50 focus:ring-1 focus:ring-[#d4af37]/50 transition-colors"
+          className="w-full bg-[#111111] border border-[#333333] rounded-xl py-3 pl-12 pr-4 text-[#f8fafc] placeholder-[#666666] focus:outline-none focus:border-[#f97316]/50 focus:ring-1 focus:ring-[#f97316]/50 transition-colors"
         />
       </div>
     </div>

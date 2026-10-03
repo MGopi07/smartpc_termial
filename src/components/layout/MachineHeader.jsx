@@ -8,12 +8,12 @@ export const MachineHeader = () => {
   const { machineData, balance } = useMachine();
 
   return (
-    <header className="flex justify-between items-center px-8 py-4 bg-[#0b101a] border-b border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.5)] z-30 relative">
+    <header className="flex justify-between items-center px-8 py-4 bg-[#0a0a0a] border-b border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.5)] z-30 relative">
       <div className="flex items-center gap-6">
         <div className="flex items-center gap-3">
           {/* Logo Text */}
-          <div className="text-[#f9d976] font-sans font-black text-2xl tracking-[0.15em]">
-            SMARTPC
+          <div className="text-[#ea580c] font-sans font-black text-2xl tracking-wider">
+            SYSGAME
           </div>
         </div>
 
@@ -33,17 +33,17 @@ export const MachineHeader = () => {
       </div>
 
       {/* Balance and Cash Out Pill Container */}
-      <div className="flex items-center p-1.5 bg-[#0f1523] border border-[#d4af37]/40 rounded-full shadow-[inset_0_2px_10px_rgba(0,0,0,0.8),0_4px_15px_rgba(0,0,0,0.5)]">
+      <div className="flex items-center p-1.5 bg-[#111111] border border-[#f97316]/40 rounded-full shadow-[inset_0_2px_10px_rgba(0,0,0,0.8),0_4px_15px_rgba(0,0,0,0.5)]">
         <div className="flex flex-col items-start justify-center px-8 min-w-[170px]">
-          <span className="text-[#d4af37] text-[10px] font-black tracking-[0.35em] uppercase mb-1.5 opacity-90 flex items-center gap-2 w-full">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#d4af37] shadow-[0_0_4px_#d4af37] animate-pulse shrink-0"></span>
+          <span className="text-[#f97316] text-[10px] font-black tracking-[0.35em] uppercase mb-1.5 opacity-90 flex items-center gap-2 w-full">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#f97316] shadow-[0_0_4px_#f97316] animate-pulse shrink-0"></span>
             Balance
           </span>
           <div className="flex items-baseline gap-1.5">
-            <span className="text-[#d4af37] text-sm font-bold opacity-80">
+            <span className="text-[#f97316] text-sm font-bold opacity-80">
               N$:
             </span>
-            <span className="text-2xl font-sans font-black text-transparent bg-clip-text bg-gradient-to-b from-[#fff7d6] via-[#f9d976] to-[#c59b27] drop-shadow-[0_0_8px_rgba(249,217,118,0.3)] tracking-wide leading-none">
+            <span className="text-2xl font-sans font-black text-transparent bg-clip-text bg-gradient-to-b from-[#ffedd5] via-[#fdba74] to-[#c59b27] drop-shadow-[0_0_8px_rgba(253,186,116,0.3)] tracking-wide leading-none">
               {balance.toFixed(2)}
             </span>
           </div>

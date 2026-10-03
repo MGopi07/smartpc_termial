@@ -30,17 +30,17 @@ export const GameCategories = ({ activeCategory, onSelectCategory }) => {
             key={category}
             onClick={() => onSelectCategory(category)}
             className={cn(
-              "flex flex-col items-center justify-center p-2 min-w-[90px] md:min-w-[100px] h-[85px] md:h-[95px] rounded-xl transition-colors duration-200 border border-transparent shadow-sm",
+              "flex flex-col items-center justify-center p-2 min-w-[90px] md:min-w-[100px] h-[85px] md:h-[95px] rounded-xl transition-colors duration-200 border shadow-sm",
               activeCategory === category
-                ? "bg-[#141c2c] border-[#141c2c]"
-                : "bg-[#141c2c] opacity-80 hover:opacity-100"
+                ? "bg-[#1a1a1a] border-[#f97316]/40"
+                : "bg-[#111111] border-[#111111] opacity-80 hover:opacity-100 hover:border-[#333333]"
             )}
           >
             <Icon 
               size={26} 
               className={cn(
                 "mb-2 transition-colors duration-200 drop-shadow-sm",
-                activeCategory === category ? "text-[#f9d976]" : "text-[#d4af37]/60"
+                activeCategory === category ? "text-[#fdba74]" : "text-[#f97316]/60"
               )}
               strokeWidth={2}
             />

@@ -27,20 +27,20 @@ export const RegistrationSuccess = () => {
   const isSmartPC = machineData.machineType === "SMART_PC";
 
   return (
-    <div className="flex h-screen w-full bg-[#1a0c2e] text-white font-sans overflow-hidden relative selection:bg-yellow-500/30">
+    <div className="flex h-screen w-full bg-black text-white font-sans overflow-hidden relative selection:bg-[#f97316]/30">
       {/* Luxury Casino Background Effect (Same as Registration) */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         {/* Soft emerald and gold ambient glows with pulsing animation */}
         <div
-          className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-[#2d1552] blur-[150px] animate-glow-pulse"
+          className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-neutral-900 blur-[150px] animate-glow-pulse"
           style={{ animationDelay: "0s" }}
         />
         <div
-          className="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-[#33114a] blur-[150px] animate-glow-pulse"
+          className="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-black blur-[150px] animate-glow-pulse"
           style={{ animationDelay: "2s" }}
         />
         <div
-          className="absolute top-[20%] right-[30%] w-[20vw] h-[20vw] rounded-full bg-yellow-600/10 blur-[100px] animate-glow-pulse"
+          className="absolute top-[20%] right-[30%] w-[20vw] h-[20vw] rounded-full bg-[#f97316]/5 blur-[100px] animate-glow-pulse"
           style={{ animationDelay: "1s" }}
         />
 
@@ -63,46 +63,48 @@ export const RegistrationSuccess = () => {
           >
             <Crown
               size={32}
-              className="text-[#d4af37] mb-2 drop-shadow-[0_2px_10px_rgba(212,175,55,0.4)]"
+              className="text-[#f97316] mb-2 drop-shadow-[0_2px_10px_rgba(249,115,22,0.4)]"
             />
-            <h1 className="text-3xl md:text-4xl font-serif tracking-widest text-transparent bg-clip-text bg-gradient-to-b from-[#fff6d6] via-[#d4af37] to-[#aa8c2c] drop-shadow-sm font-semibold text-center uppercase">
+            <h1 className="text-3xl md:text-4xl font-serif tracking-widest text-transparent bg-clip-text bg-gradient-to-b from-[#ffedd5] via-[#f97316] to-[#ea580c] drop-shadow-sm font-semibold text-center uppercase">
               Success
             </h1>
           </div>
 
           {/* Luxury Glass Form Card */}
           <div
-            className="bg-[#110820]/70 backdrop-blur-xl border border-[#d4af37]/20 rounded-2xl p-6 md:p-8 shadow-[0_20px_50px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.1)] relative animate-fade-in-up"
+            className="bg-[#0a0a0a]/80 backdrop-blur-xl border border-[#f97316]/20 rounded-2xl p-6 md:p-8 shadow-[0_20px_50px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.1)] relative animate-fade-in-up"
             style={{ opacity: 0, animationDelay: "0.3s" }}
           >
             {/* Elegant corner accents */}
-            <div className="absolute top-0 left-0 w-6 h-6 border-t border-l border-[#d4af37]/50 rounded-tl-2xl" />
-            <div className="absolute top-0 right-0 w-6 h-6 border-t border-r border-[#d4af37]/50 rounded-tr-2xl" />
-            <div className="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-[#d4af37]/50 rounded-bl-2xl" />
-            <div className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-[#d4af37]/50 rounded-br-2xl" />
+            <div className="absolute top-0 left-0 w-6 h-6 border-t border-l border-[#f97316]/50 rounded-tl-2xl" />
+            <div className="absolute top-0 right-0 w-6 h-6 border-t border-r border-[#f97316]/50 rounded-tr-2xl" />
+            <div className="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-[#f97316]/50 rounded-bl-2xl" />
+            <div className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-[#f97316]/50 rounded-br-2xl" />
 
             <div className="flex flex-col items-center">
               {/* Checkmark Animation */}
               <div className="relative mb-4">
-                <div className="absolute inset-0 bg-[#d4af37] rounded-full blur-[20px] opacity-20 animate-pulse" />
-                <div className="relative bg-gradient-to-b from-[#f9d976] via-[#d4af37] to-[#aa8c2c] p-[2px] rounded-full shadow-[0_0_20px_rgba(212,175,55,0.3)]">
-                  <div className="bg-[#1a0c2e] p-3 rounded-full">
+                <div className="absolute inset-0 bg-[#f97316] rounded-full blur-[20px] opacity-20 animate-pulse" />
+                <div className="relative bg-gradient-to-b from-[#fdba74] via-[#f97316] to-[#ea580c] p-[2px] rounded-full shadow-[0_0_20px_rgba(249,115,22,0.3)]">
+                  <div className="bg-black p-3 rounded-full">
                     <CheckCircle2
                       size={30}
-                      className="text-[#d4af37]"
+                      className="text-[#f97316]"
                       strokeWidth={1.5}
                     />
                   </div>
                 </div>
               </div>
 
-              <h2 className="text-2xl font-serif text-[#fff6d6] mb-6 text-center uppercase tracking-widest drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+              <h2 className="text-2xl font-serif text-[#ffedd5] mb-6 text-center uppercase tracking-widest drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                 Registration Complete
               </h2>
 
               {/* Machine Details Card */}
-              <div className="w-full bg-[#0a0512] border border-[#d4af37]/30 rounded-xl overflow-hidden mb-6 shadow-inner">
-                <div className="p-4 border-b border-[#d4af37]/10 flex items-center gap-3">
+              <div className="relative group rounded-xl overflow-hidden p-[1px] mb-6 w-full">
+                <div className="absolute inset-0 bg-gradient-to-r from-[#f97316]/0 via-[#f97316]/40 to-[#f97316]/0 blur opacity-0 group-hover:opacity-100 transition duration-500" />
+                <div className="relative w-full bg-[#111111] border border-[#f97316]/30 rounded-xl overflow-hidden shadow-inner">
+                <div className="p-4 border-b border-[#f97316]/10 flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#4ade80] shadow-[0_0_10px_rgba(74,222,128,0.5)] animate-pulse" />
                   <span className="text-[#e6dec3] font-serif uppercase tracking-widest text-sm">
                     Machine Online
@@ -111,52 +113,53 @@ export const RegistrationSuccess = () => {
 
                 <div className="p-3 space-y-3">
                   {/* Machine ID */}
-                  <div className="flex justify-between items-center border-b border-[#d4af37]/10 pb-3">
-                    <span className="text-[#d4af37]/60 text-xs font-serif uppercase tracking-widest">
+                  <div className="flex justify-between items-center border-b border-[#f97316]/10 pb-3">
+                    <span className="text-[#f97316]/60 text-xs font-serif uppercase tracking-widest">
                       Machine ID
                     </span>
-                    <span className="text-[#fff6d6] font-mono tracking-widest font-bold">
+                    <span className="text-[#ffedd5] font-mono tracking-widest font-bold">
                       {machineData.machineId}
                     </span>
                   </div>
 
                   {/* Type */}
-                  <div className="flex justify-between items-center border-b border-[#d4af37]/10 pb-3">
-                    <span className="text-[#d4af37]/60 text-xs font-serif uppercase tracking-widest">
+                  <div className="flex justify-between items-center border-b border-[#f97316]/10 pb-3">
+                    <span className="text-[#f97316]/60 text-xs font-serif uppercase tracking-widest">
                       Type
                     </span>
-                    <span className="text-[#fff6d6] font-mono tracking-widest flex items-center gap-2">
+                    <span className="text-[#ffedd5] font-mono tracking-widest flex items-center gap-2">
                       {isSmartPC ? (
-                        <Monitor size={16} className="text-[#d4af37]" />
+                        <Monitor size={16} className="text-[#f97316]" />
                       ) : (
-                        <CreditCard size={16} className="text-[#d4af37]" />
+                        <CreditCard size={16} className="text-[#f97316]" />
                       )}
                       {isSmartPC ? "SMART PC" : "TERMINAL"}
                     </span>
                   </div>
 
                   {/* Shop */}
-                  <div className="flex justify-between items-center border-b border-[#d4af37]/10 pb-3">
-                    <span className="text-[#d4af37]/60 text-xs font-serif uppercase tracking-widest">
+                  <div className="flex justify-between items-center border-b border-[#f97316]/10 pb-3">
+                    <span className="text-[#f97316]/60 text-xs font-serif uppercase tracking-widest">
                       Shop
                     </span>
-                    <span className="text-[#fff6d6] font-serif tracking-widest flex items-center gap-2">
-                      <Store size={14} className="text-[#d4af37]/70" />
+                    <span className="text-[#ffedd5] font-serif tracking-widest flex items-center gap-2">
+                      <Store size={14} className="text-[#f97316]/70" />
                       {machineData.shopName}
                     </span>
                   </div>
 
                   {/* Location */}
                   <div className="flex justify-between items-center">
-                    <span className="text-[#d4af37]/60 text-xs font-serif uppercase tracking-widest">
+                    <span className="text-[#f97316]/60 text-xs font-serif uppercase tracking-widest">
                       Location
                     </span>
-                    <span className="text-[#fff6d6]/70 font-sans text-xs flex items-center gap-1">
-                      <MapPin size={12} className="text-[#d4af37]/50" />
+                    <span className="text-[#ffedd5]/70 font-sans text-xs flex items-center gap-1">
+                      <MapPin size={12} className="text-[#f97316]/50" />
                       {machineData.location}
                     </span>
                   </div>
                 </div>
+              </div>
               </div>
 
               {/* Continue Button */}
@@ -166,22 +169,22 @@ export const RegistrationSuccess = () => {
               >
                 <button
                   onClick={() => navigate("/gaming")}
-                  className="w-full relative group rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(212,175,55,0.3)] active:scale-[0.98]"
+                  className="w-full relative group rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(249,115,22,0.3)] active:scale-[0.98]"
                 >
                   {/* Base Border */}
-                  <div className="absolute inset-0 border border-[#d4af37]/40 rounded-2xl transition-all duration-500 group-hover:border-transparent" />
+                  <div className="absolute inset-0 border border-[#f97316]/40 rounded-2xl transition-all duration-500 group-hover:border-transparent" />
 
                   {/* Fill Background that fades in on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#aa8c2c] via-[#f9d976] to-[#aa8c2c] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#ea580c] via-[#fdba74] to-[#ea580c] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                   {/* Button Content */}
                   <div className="relative w-full py-4 flex justify-center items-center gap-3 z-10">
-                    <span className="text-[#d4af37] group-hover:text-[#03120c] font-serif font-bold text-lg md:text-xl tracking-[0.2em] transition-colors duration-500">
+                    <span className="text-[#f97316] group-hover:text-[#03120c] font-serif font-bold text-sm tracking-[0.2em] uppercase transition-colors duration-500">
                       Enter Platform
                     </span>
                     <ArrowRight
                       size={20}
-                      className="text-[#d4af37] group-hover:text-[#03120c] transition-colors duration-500 group-hover:translate-x-1"
+                      className="text-[#f97316] group-hover:text-[#03120c] transition-colors duration-500 group-hover:translate-x-1"
                     />
                   </div>
                 </button>

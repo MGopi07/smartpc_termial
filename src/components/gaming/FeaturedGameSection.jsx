@@ -8,41 +8,41 @@ const FeaturedCard = ({ featured }) => {
   return (
     <div
       className={cn(
-        "relative h-full rounded-3xl p-8 overflow-hidden flex flex-col min-h-[420px] shadow-2xl border border-white/10",
-        "bg-gradient-to-br from-fuchsia-600 via-purple-600 to-indigo-800"
+        "relative h-full rounded-3xl p-8 overflow-hidden flex flex-col min-h-[420px] shadow-2xl border border-[#f97316]/20",
+        "bg-[#111111]"
       )}
     >
       {/* Dynamic Background Image Overlay */}
       <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-20 mix-blend-overlay"></div>
       
-      {/* Abstract Glowing Orbs (Replaces the image for visual interest) */}
-      <div className="absolute top-[-20%] right-[-10%] w-64 h-64 bg-pink-400 rounded-full mix-blend-screen filter blur-[80px] opacity-40"></div>
-      <div className="absolute bottom-[-10%] left-[-20%] w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-[80px] opacity-50"></div>
+      {/* Abstract Glowing Orbs */}
+      <div className="absolute top-[-20%] right-[-10%] w-64 h-64 bg-[#f97316] rounded-full mix-blend-screen filter blur-[100px] opacity-20"></div>
+      <div className="absolute bottom-[-10%] left-[-20%] w-72 h-72 bg-[#ea580c] rounded-full mix-blend-screen filter blur-[100px] opacity-20"></div>
 
       <div className="relative z-10 flex-1 flex flex-col">
         <div className="mb-6">
           <div className="flex items-center gap-2 mb-2">
-            <span className="w-2 h-2 rounded-full bg-pink-300 animate-pulse"></span>
-            <div className="text-fuchsia-100 text-[11px] font-bold tracking-[0.25em] uppercase drop-shadow-sm">
+            <span className="w-2 h-2 rounded-full bg-[#f97316] animate-pulse"></span>
+            <div className="text-[#f97316] text-[11px] font-bold tracking-[0.25em] uppercase drop-shadow-sm">
               {featured.badge}
             </div>
           </div>
           <h3 className="text-white text-4xl md:text-5xl font-black leading-tight drop-shadow-lg tracking-tight">
             {featured.title}
           </h3>
-          <div className="w-12 h-1 bg-gradient-to-r from-pink-300 to-purple-500 rounded-full mt-4"></div>
+          <div className="w-12 h-1 bg-gradient-to-r from-[#fdba74] to-[#ea580c] rounded-full mt-4"></div>
         </div>
         
         <div className="space-y-3 mt-auto pb-2">
           {featured.stats.map((stat, idx) => (
             <div
               key={idx}
-              className="bg-white/10 backdrop-blur-xl rounded-2xl p-4 shadow-[0_8px_32px_rgba(0,0,0,0.15)] relative overflow-hidden transform hover:-translate-y-1 transition-transform w-full border border-white/20 group flex justify-between items-center"
+              className="bg-[#1a1a1a] backdrop-blur-xl rounded-2xl p-4 shadow-[0_8px_32px_rgba(0,0,0,0.5)] relative overflow-hidden transform hover:-translate-y-1 transition-transform w-full border border-[#f97316]/20 group flex justify-between items-center hover:border-[#f97316]/50"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/5 to-white/0 group-hover:translate-x-full transition-transform duration-1000 -skew-x-12"></div>
               
               <div className="flex flex-col relative z-10">
-                <div className="text-fuchsia-100 text-[10px] uppercase font-bold tracking-widest mb-0.5">
+                <div className="text-slate-400 text-[10px] uppercase font-bold tracking-widest mb-0.5">
                   {stat.label}
                 </div>
                 <div className="text-white font-black text-[17px] drop-shadow-sm">
@@ -91,7 +91,7 @@ export const FeaturedGameSection = ({ section, games, onGameClick }) => {
           </h2>
         </div>
         <div className="flex items-center gap-2">
-          <button className="text-slate-300 hover:text-white transition-all text-xs font-bold flex items-center bg-[#141c2c]/80 hover:bg-[#1e293b] px-5 py-2.5 rounded-xl border border-white/5 shadow-md backdrop-blur-sm">
+          <button className="text-slate-300 hover:text-white transition-all text-xs font-bold flex items-center bg-[#111111]/80 hover:bg-[#222222] px-5 py-2.5 rounded-xl border border-white/5 shadow-md backdrop-blur-sm">
             More Live Dealers
             <LucideIcons.ChevronRight size={16} className="ml-1" />
           </button>

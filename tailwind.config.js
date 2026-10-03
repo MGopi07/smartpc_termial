@@ -8,11 +8,11 @@ export default {
     extend: {
       colors: {
         winbet: {
-          navy: '#0b132b',
-          dark: '#0c0e10',
-          light: '#1c2541',
-          gold: '#d4af37',
-          goldDark: '#aa8c2c',
+          navy: '#050505',
+          dark: '#0a0a0a',
+          light: '#171717',
+          gold: '#f97316',
+          goldDark: '#ea580c',
           text: '#f8f9fa',
         }
       },
