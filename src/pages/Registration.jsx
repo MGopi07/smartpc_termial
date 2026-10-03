@@ -55,19 +55,19 @@ export const Registration = () => {
               size={32}
               className="text-[#f97316] mb-2 drop-shadow-[0_2px_10px_rgba(249,115,22,0.4)]"
             />
-            <h1 className="text-4xl md:text-5xl font-serif tracking-widest text-transparent bg-clip-text bg-gradient-to-b from-[#ffedd5] via-[#f97316] to-[#ea580c] drop-shadow-sm font-semibold text-center uppercase">
-              Registration  
+            <h1 className="text-4xl md:text-5xl font-sans tracking-widest text-transparent bg-clip-text bg-gradient-to-b from-[#ffedd5] via-[#f97316] to-[#ea580c] drop-shadow-sm font-semibold text-center uppercase">
+              Registration
             </h1>
             {/* <div className="flex items-center gap-4 mt-4 w-full px-8 opacity-70">
               <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-[#f97316]/40" />
-              <span className="text-[#f97316] text-xs font-serif tracking-[0.3em] uppercase">Registration</span>
+              <span className="text-[#f97316] text-xs font-sans tracking-[0.3em] uppercase">Registration</span>
               <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-[#f97316]/40" />
             </div> */}
           </div>
 
           {/* Luxury Glass Form Card (Fades in second) */}
           <div
-            className="bg-[#0a0a0a]/80 backdrop-blur-xl border border-[#f97316]/20 rounded-2xl p-6 md:p-8 shadow-[0_20px_50px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.1)] relative animate-fade-in-up"
+            className="bg-[#1a1a1a]/95 backdrop-blur-xl border border-[#f97316]/20 rounded-2xl p-6 md:p-8 shadow-[0_20px_50px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.05)] relative animate-fade-in-up"
             style={{ opacity: 0, animationDelay: "0.3s" }}
           >
             {/* Elegant corner accents */}
@@ -84,7 +84,7 @@ export const Registration = () => {
                 className="animate-fade-in-up"
                 style={{ opacity: 0, animationDelay: "0.5s" }}
               >
-                <label className="block text-[#e6dec3] font-serif text-sm tracking-widest uppercase mb-4 text-center">
+                <label className="block text-[#e6dec3] font-sans text-sm tracking-widest uppercase mb-4 text-center">
                   Select Machine Type
                 </label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -123,7 +123,7 @@ export const Registration = () => {
 
                   {/* Button Content */}
                   <div className="relative w-full py-4 flex justify-center items-center z-10">
-                    <span className="text-[#f97316] group-hover:text-[#03120c] font-serif font-bold text-sm tracking-[0.2em] uppercase transition-colors duration-500">
+                    <span className="text-[#f97316] group-hover:text-[#03120c] font-sans font-bold text-sm tracking-[0.2em] uppercase transition-colors duration-500">
                       Authenticate
                     </span>
                   </div>
@@ -131,7 +131,7 @@ export const Registration = () => {
               </div>
 
               <div
-                className="flex items-center justify-center gap-2 text-white/70 text-xs font-serif tracking-widest mt-6 animate-fade-in-up"
+                className="flex items-center justify-center gap-2 text-white/70 text-xs font-sans tracking-widest mt-6 animate-fade-in-up"
                 style={{ opacity: 0, animationDelay: "0.7s" }}
               >
                 <Shield size={14} />
@@ -142,8 +142,8 @@ export const Registration = () => {
         </div>
       </div>
 
-      <RegisterModal 
-        isOpen={isModalOpen} 
+      <RegisterModal
+        isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         machineType={machineType}
       />
@@ -164,16 +164,16 @@ const MachineSelectCard = ({ title, icon, selected, onClick }) => {
       {/* Outer Border/Background */}
       <div
         className={cn(
-          "absolute inset-0 transition-all duration-500 z-0",
+          "absolute inset-0 transition-all duration-500 z-0 rounded-xl overflow-hidden",
           selected
-            ? "bg-[#0a0a0a]"
+            ? "border border-[#1a1a1a] shadow-[0_0_25px_rgba(249,115,22,0.15)]"
             : "border border-[#f97316]/20 bg-black/50 group-hover:border-[#f97316]/40 group-hover:bg-[#f97316]/5",
         )}
       >
         {selected && (
           <>
-            <div className="absolute inset-[-100%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_0_270deg,#f97316_360deg)] opacity-80" />
-            <div className="absolute inset-[1px] bg-[#0a0a0a] rounded-[11px] shadow-[inset_0_0_20px_rgba(249,115,22,0.15)]" />
+            <div className="absolute inset-[-100%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_0_270deg,#f97316_360deg)] opacity-100" />
+            <div className="absolute inset-[1px] bg-[#0a0a0a] rounded-[11px]" />
           </>
         )}
       </div>
@@ -194,7 +194,7 @@ const MachineSelectCard = ({ title, icon, selected, onClick }) => {
       <div className="text-center z-10">
         <h3
           className={cn(
-            "text-sm md:text-base font-serif tracking-widest uppercase transition-colors",
+            "text-sm md:text-base font-sans tracking-widest uppercase transition-colors",
             selected ? "text-[#ffedd5] font-bold" : "text-[#e6dec3]/70",
           )}
         >

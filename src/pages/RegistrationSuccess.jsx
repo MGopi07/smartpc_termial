@@ -65,7 +65,7 @@ export const RegistrationSuccess = () => {
               size={32}
               className="text-[#f97316] mb-2 drop-shadow-[0_2px_10px_rgba(249,115,22,0.4)]"
             />
-            <h1 className="text-3xl md:text-4xl font-serif tracking-widest text-transparent bg-clip-text bg-gradient-to-b from-[#ffedd5] via-[#f97316] to-[#ea580c] drop-shadow-sm font-semibold text-center uppercase">
+            <h1 className="text-3xl md:text-4xl font-sans tracking-widest text-transparent bg-clip-text bg-gradient-to-b from-[#ffedd5] via-[#f97316] to-[#ea580c] drop-shadow-sm font-bold text-center uppercase">
               Success
             </h1>
           </div>
@@ -96,7 +96,7 @@ export const RegistrationSuccess = () => {
                 </div>
               </div>
 
-              <h2 className="text-2xl font-serif text-[#ffedd5] mb-6 text-center uppercase tracking-widest drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+              <h2 className="text-2xl font-sans font-bold text-[#ffedd5] mb-6 text-center uppercase tracking-widest drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                 Registration Complete
               </h2>
 
@@ -106,7 +106,7 @@ export const RegistrationSuccess = () => {
                 <div className="relative w-full bg-[#111111] border border-[#f97316]/30 rounded-xl overflow-hidden shadow-inner">
                 <div className="p-4 border-b border-[#f97316]/10 flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#4ade80] shadow-[0_0_10px_rgba(74,222,128,0.5)] animate-pulse" />
-                  <span className="text-[#e6dec3] font-serif uppercase tracking-widest text-sm">
+                  <span className="text-[#e6dec3] font-sans font-medium uppercase tracking-widest text-sm">
                     Machine Online
                   </span>
                 </div>
@@ -114,7 +114,7 @@ export const RegistrationSuccess = () => {
                 <div className="p-3 space-y-3">
                   {/* Machine ID */}
                   <div className="flex justify-between items-center border-b border-[#f97316]/10 pb-3">
-                    <span className="text-[#f97316]/60 text-xs font-serif uppercase tracking-widest">
+                    <span className="text-white/60 text-xs font-sans font-medium uppercase tracking-widest">
                       Machine ID
                     </span>
                     <span className="text-[#ffedd5] font-mono tracking-widest font-bold">
@@ -124,7 +124,7 @@ export const RegistrationSuccess = () => {
 
                   {/* Type */}
                   <div className="flex justify-between items-center border-b border-[#f97316]/10 pb-3">
-                    <span className="text-[#f97316]/60 text-xs font-serif uppercase tracking-widest">
+                    <span className="text-white/60 text-xs font-sans font-medium uppercase tracking-widest">
                       Type
                     </span>
                     <span className="text-[#ffedd5] font-mono tracking-widest flex items-center gap-2">
@@ -139,10 +139,10 @@ export const RegistrationSuccess = () => {
 
                   {/* Shop */}
                   <div className="flex justify-between items-center border-b border-[#f97316]/10 pb-3">
-                    <span className="text-[#f97316]/60 text-xs font-serif uppercase tracking-widest">
+                    <span className="text-white/60 text-xs font-sans font-medium uppercase tracking-widest">
                       Shop
                     </span>
-                    <span className="text-[#ffedd5] font-serif tracking-widest flex items-center gap-2">
+                    <span className="text-[#ffedd5] font-sans font-medium tracking-widest flex items-center gap-2">
                       <Store size={14} className="text-[#f97316]/70" />
                       {machineData.shopName}
                     </span>
@@ -150,7 +150,7 @@ export const RegistrationSuccess = () => {
 
                   {/* Location */}
                   <div className="flex justify-between items-center">
-                    <span className="text-[#f97316]/60 text-xs font-serif uppercase tracking-widest">
+                    <span className="text-white/60 text-xs font-sans font-medium uppercase tracking-widest">
                       Location
                     </span>
                     <span className="text-[#ffedd5]/70 font-sans text-xs flex items-center gap-1">
@@ -179,7 +179,7 @@ export const RegistrationSuccess = () => {
 
                   {/* Button Content */}
                   <div className="relative w-full py-4 flex justify-center items-center gap-3 z-10">
-                    <span className="text-[#f97316] group-hover:text-[#03120c] font-serif font-bold text-sm tracking-[0.2em] uppercase transition-colors duration-500">
+                    <span className="text-[#f97316] group-hover:text-[#03120c] font-sans font-bold text-sm tracking-[0.2em] uppercase transition-colors duration-500">
                       Enter Platform
                     </span>
                     <ArrowRight

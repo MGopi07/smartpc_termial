@@ -26,111 +26,107 @@ export const SmartPCCashOut = () => {
       <button
         onClick={() => setIsModalOpen(true)}
         disabled={balance <= 0}
-        className="px-8 py-2.5 rounded-full bg-gradient-to-r from-[#ea580c] via-[#fdba74] to-[#ea580c] text-[#110820] font-serif font-bold hover:brightness-110 active:scale-95 transition-all duration-300 disabled:opacity-50 disabled:grayscale shadow-[0_0_20px_rgba(249,115,22,0.3)]"
+        className="px-8 py-2.5 rounded-full bg-gradient-to-r from-[#ea580c] via-[#fdba74] to-[#ea580c] text-[#110820] font-sans font-bold hover:brightness-110 active:scale-95 transition-all duration-300 disabled:opacity-50 disabled:grayscale shadow-[0_0_20px_rgba(249,115,22,0.3)]"
       >
         <span className="text-sm tracking-[0.2em] uppercase drop-shadow-sm">
           Cash Out
         </span>
       </button>
 
-          <Modal
-            isOpen={isModalOpen}
-            onClose={!cashOutResult ? handleClose : undefined}
-            className="!bg-[#0a0a0a] border border-[#f97316]/30 shadow-[0_20px_50px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.1)] !rounded-3xl p-8"
-          >
-          {!cashOutResult ? (
-            <div className="flex flex-col items-center text-center pt-2 relative">
-              <div className="flex justify-center mb-6 relative">
-                <div className="absolute inset-0 bg-[#f97316] blur-[20px] rounded-full opacity-10 animate-pulse"></div>
-                <div className="h-24 w-24 rounded-full bg-gradient-to-b from-[#fdba74] to-[#ea580c] p-[2px] shadow-[0_0_15px_rgba(249,115,22,0.15)]">
-                  <div className="w-full h-full bg-[#0a0a0a] rounded-full flex items-center justify-center">
-                    <Banknote size={44} className="text-[#f97316]" />
+      <Modal
+        isOpen={isModalOpen}
+        onClose={!cashOutResult ? handleClose : undefined}
+        num={!cashOutResult ? "4" : undefined}
+        title={!cashOutResult ? "Print Cashout Ticket" : "Transfer Complete"}
+      >
+        {!cashOutResult ? (
+          <div className="w-full text-center">
+            <div className="w-full bg-[#110b1a] border border-white/5 rounded-xl p-6 mb-5 text-center shadow-inner relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent"></div>
+
+              <div className="flex justify-center mb-4 relative">
+                <div className="absolute inset-0 bg-yellow-500 blur-[20px] rounded-full opacity-40 animate-pulse"></div>
+                <div className="h-16 w-16 rounded-full bg-gradient-to-b from-yellow-400 to-yellow-600 p-[2px] relative z-10 shadow-[0_0_15px_rgba(234,179,8,0.3)]">
+                  <div className="w-full h-full bg-[#1e1332] rounded-full flex items-center justify-center text-yellow-500">
+                    <Banknote size={24} />
                   </div>
                 </div>
               </div>
-
-              <h2 className="text-2xl font-serif text-[#f97316] tracking-widest uppercase font-bold drop-shadow-md mb-8">
+              <h3 className="text-yellow-500 font-bold text-[15px] mb-1">
                 System Cashout
-              </h2>
-
-              <div className="w-full mb-10 bg-[#161616] rounded-2xl p-8 border border-[#f97316]/20 relative overflow-hidden flex flex-col items-center justify-center shadow-[inset_0_2px_20px_rgba(0,0,0,0.5)]">
-                {/* Glowing orb behind text */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-1/2 bg-[#f97316]/10 blur-[40px] rounded-full pointer-events-none"></div>
-                
-                {/* Top highlight line */}
-                <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#f97316]/80 to-transparent"></div>
-                
-                <div className="text-[#e6dec3]/70 text-[11px] font-sans font-bold tracking-[0.3em] uppercase mb-4 relative z-10">
-                  Available Amount
-                </div>
-                <div className="text-4xl md:text-5xl font-sans font-black text-transparent bg-clip-text bg-gradient-to-b from-white via-[#ffedd5] to-[#f97316] tracking-tight relative z-10 flex items-baseline justify-center gap-2 drop-shadow-lg">
-                  <span className="text-2xl md:text-3xl text-[#f97316] bg-none bg-clip-border text-transparent bg-clip-text bg-gradient-to-b from-[#f97316] to-[#ea580c]">N$</span>
-                  {balance.toFixed(2)}
-                </div>
-              </div>
-
-              <div className="flex gap-4 w-full">
-                <Button
-                  variant="secondary"
-                  onClick={handleClose}
-                  className="flex-1 py-4 text-sm tracking-widest uppercase border border-white/10 bg-transparent hover:bg-white/5 rounded-2xl"
-                >
-                  Cancel
-                </Button>
-                <Button
-                  onClick={handleCashOut}
-                  className="flex-1 py-4 text-sm tracking-widest uppercase bg-gradient-to-r from-[#ea580c] via-[#fdba74] to-[#ea580c] text-[#110820] font-bold hover:brightness-110 shadow-[0_0_20px_rgba(249,115,22,0.4)] rounded-2xl"
-                >
-                  Confirm
-                </Button>
+              </h3>
+              <p className="text-white/40 text-[10px] tracking-widest uppercase mb-3">
+                Amount Available
+              </p>
+              <div className="text-3xl font-black text-yellow-500">
+                N$ {balance.toFixed(2)}
               </div>
             </div>
-          ) : (
-            <div className="flex flex-col items-center text-center animate-in fade-in zoom-in duration-300 pt-2 relative">
-              <div className="flex justify-center mb-6 relative">
-                <div className="absolute inset-0 bg-emerald-500 blur-[20px] rounded-full opacity-10 animate-pulse"></div>
-                <div className="h-24 w-24 rounded-full bg-gradient-to-b from-emerald-300 to-emerald-600 p-[2px] shadow-[0_0_15px_rgba(16,185,129,0.15)]">
-                  <div className="w-full h-full bg-[#0a0a0a] rounded-full flex items-center justify-center">
-                    <CheckCircle2 size={44} className="text-emerald-400" />
-                  </div>
-                </div>
-              </div>
 
-              <h2 className="text-2xl font-sans text-white tracking-widest uppercase font-black mb-8 drop-shadow-md">
-                Transfer Complete
-              </h2>
+            <p className="text-white/90 text-[13px] font-medium leading-relaxed mb-5 px-2">
+              Do you want to perform a system cashout for{" "}
+              <span className="text-yellow-500 font-bold">
+                N$ {balance.toFixed(2)}
+              </span>
+              ?
+            </p>
 
-              <div className="w-full bg-[#161616] rounded-2xl p-6 mb-8 text-left border border-emerald-500/20 shadow-[inset_0_2px_20px_rgba(0,0,0,0.5)] relative overflow-hidden">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-1/2 bg-emerald-500/5 blur-[40px] rounded-full pointer-events-none"></div>
-                
-                <div className="flex justify-between items-center mb-5 relative z-10">
-                  <span className="text-emerald-400/60 text-[10px] font-sans font-bold uppercase tracking-[0.2em]">Amount Extracted</span>
-                  <div className="flex items-baseline gap-1.5">
-                    <span className="text-xl text-emerald-400 font-sans font-bold">N$</span>
-                    <span className="text-3xl font-sans font-black text-white tracking-tight drop-shadow-md">{cashOutResult.amount.toFixed(2)}</span>
-                  </div>
-                </div>
-
-                <div className="h-px w-full mb-5 bg-gradient-to-r from-transparent via-emerald-500/20 to-transparent relative z-10"></div>
-
-                <div className="flex justify-between items-center relative z-10">
-                  <span className="text-emerald-400/60 text-[10px] font-sans font-bold uppercase tracking-[0.2em]">System Balance</span>
-                  <div className="flex items-baseline gap-1.5">
-                    <span className="text-sm text-emerald-500/70 font-sans font-bold">N$</span>
-                    <span className="text-xl font-sans font-black text-emerald-500 tracking-tight">0.00</span>
-                  </div>
-                </div>
-              </div>
-
+            <div className="w-full space-y-2 mb-4">
+              <button
+                onClick={handleCashOut}
+                className="w-full py-3.5 px-4 bg-gradient-to-b from-[#9333ea] to-[#7e22ce] text-white font-bold rounded-xl shadow-[0_4px_15px_rgba(126,34,206,0.5),inset_0_1px_0_rgba(255,255,255,0.2)] border border-purple-500/50 hover:brightness-110 active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+              >
+                Confirm
+              </button>
               <button
                 onClick={handleClose}
-                className="w-full py-4 text-sm tracking-[0.2em] uppercase bg-gradient-to-r from-emerald-500 to-emerald-600 text-[#03120c] font-black hover:brightness-110 active:scale-[0.98] transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)] rounded-2xl border border-emerald-400/50"
+                className="w-full py-3.5 px-4 bg-[#110b1a] text-red-500 font-bold rounded-xl border border-white/5 hover:bg-[#1a1025] active:scale-[0.98] transition-all flex items-center justify-center gap-2"
               >
-                Okay
+                Cancel
               </button>
             </div>
-          )}
-        </Modal>
+          </div>
+        ) : (
+          <div className="w-full text-center">
+            <div className="flex justify-center mb-5 relative">
+              <div className="absolute inset-0 bg-emerald-500 blur-[20px] rounded-full opacity-40 animate-pulse"></div>
+              <div className="h-16 w-16 rounded-full bg-gradient-to-b from-emerald-400 to-emerald-600 p-[2px] relative z-10 shadow-[0_0_15px_rgba(16,185,129,0.3)]">
+                <div className="w-full h-full bg-[#1e1332] rounded-full flex items-center justify-center text-emerald-400">
+                  <CheckCircle2 size={28} />
+                </div>
+              </div>
+            </div>
+
+            <h2 className="text-[17px] font-bold text-emerald-400 mb-5">
+              Transfer Complete
+            </h2>
+
+            <div className="w-full bg-[#110b1a] border border-white/5 rounded-xl p-5 mb-5 text-center shadow-inner">
+              <div className="inline-block px-3 py-1 bg-emerald-900/40 border border-emerald-500/30 rounded-md text-emerald-500 text-[10px] font-bold tracking-widest mb-3 uppercase">
+                Amount Extracted
+              </div>
+              <div className="text-3xl font-bold text-emerald-400 mb-2">
+                +N$ {cashOutResult.amount.toFixed(2)}
+              </div>
+              <div className="flex justify-between items-center py-2 mt-2 border-t border-white/5">
+                <span className="text-white/40 text-[11px] font-medium">
+                  System Balance
+                </span>
+                <span className="text-emerald-500 text-[11px] font-bold">
+                  N$ 0.00
+                </span>
+              </div>
+            </div>
+
+            <button
+              onClick={handleClose}
+              className="w-full py-3.5 px-4 bg-gradient-to-b from-[#9333ea] to-[#7e22ce] text-white font-bold rounded-xl shadow-[0_4px_15px_rgba(126,34,206,0.5),inset_0_1px_0_rgba(255,255,255,0.2)] border border-purple-500/50 hover:brightness-110 active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+            >
+              Okay
+            </button>
+          </div>
+        )}
+      </Modal>
     </>
   );
 };

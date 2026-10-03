@@ -20,7 +20,7 @@ const CATEGORY_ICONS = {
 
 export const GameCategories = ({ activeCategory, onSelectCategory }) => {
   return (
-    <div className="flex gap-2 md:gap-3 overflow-x-auto pb-4 pt-4 scrollbar-hide no-scrollbar w-full px-4 max-w-[1800px] mx-auto">
+    <div className="flex gap-2 md:gap-3 overflow-x-auto pb-4 pt-4 scrollbar-hide no-scrollbar w-full px-4 max-w-[1800px] mx-auto xl:justify-center">
       {CATEGORIES.map((category) => {
         const IconName = CATEGORY_ICONS[category] || 'Gamepad2';
         const Icon = LucideIcons[IconName];

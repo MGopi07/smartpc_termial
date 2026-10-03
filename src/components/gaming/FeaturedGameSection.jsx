@@ -8,7 +8,7 @@ const FeaturedCard = ({ featured }) => {
   return (
     <div
       className={cn(
-        "relative h-full rounded-3xl p-8 overflow-hidden flex flex-col min-h-[420px] shadow-2xl border border-[#f97316]/20",
+        "relative rounded-3xl p-6 overflow-hidden flex flex-col w-full shadow-2xl border border-[#f97316]/20",
         "bg-[#111111]"
       )}
     >
@@ -99,7 +99,7 @@ export const FeaturedGameSection = ({ section, games, onGameClick }) => {
       </div>
 
       <div className="flex flex-col xl:flex-row gap-5">
-        <div className="w-full xl:w-[400px] shrink-0">
+        <div className="w-full xl:w-[400px] shrink-0 flex">
           <FeaturedCard featured={section.featured} />
         </div>
         <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4 md:gap-5">

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { useMachine } from '../../context/MachineContext';
-import { Button } from '../common/Button';
-import { Modal } from '../common/Modal';
-import { Receipt } from 'lucide-react';
+import React, { useState } from "react";
+import { useMachine } from "../../context/MachineContext";
+import { Button } from "../common/Button";
+import { Modal } from "../common/Modal";
+import { Receipt } from "lucide-react";
 
 export const TerminalCashout = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -23,18 +23,23 @@ export const TerminalCashout = () => {
 
   return (
     <>
-      <button 
-        onClick={() => setIsModalOpen(true)} 
+      <button
+        onClick={() => setIsModalOpen(true)}
         disabled={balance <= 0}
-        className="px-8 py-2.5 rounded-full bg-gradient-to-r from-[#ea580c] via-[#fdba74] to-[#ea580c] text-[#110820] font-serif font-bold hover:brightness-110 active:scale-95 transition-all duration-300 disabled:opacity-50 disabled:grayscale shadow-[0_0_20px_rgba(249,115,22,0.3)]"
+        className="px-8 py-2.5 rounded-full bg-gradient-to-r from-[#ea580c] via-[#fdba74] to-[#ea580c] text-[#110820] font-sans font-bold hover:brightness-110 active:scale-95 transition-all duration-300 disabled:opacity-50 disabled:grayscale shadow-[0_0_20px_rgba(249,115,22,0.3)]"
       >
-        <span className="text-sm tracking-[0.2em] uppercase drop-shadow-sm">Print Ticket</span>
+        <span className="text-sm tracking-[0.2em] uppercase drop-shadow-sm">
+          Print Ticket
+        </span>
       </button>
 
-      <Modal isOpen={isModalOpen} onClose={!ticketResult ? handleClose : undefined}>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={!ticketResult ? handleClose : undefined}
+      >
         {!ticketResult ? (
           <div className="text-center">
-            <h2 className="text-2xl font-serif text-[#f97316] tracking-widest uppercase font-bold drop-shadow-md mb-8">
+            <h2 className="text-2xl font-sans text-[#f97316] tracking-widest uppercase font-bold drop-shadow-md mb-8">
               Print Cashout Ticket
             </h2>
             <div className="mb-10 bg-[#0a0f1a] rounded-2xl p-8 border border-[#f97316]/20 shadow-inner relative overflow-hidden">
@@ -47,15 +52,15 @@ export const TerminalCashout = () => {
               </div>
             </div>
             <div className="flex gap-4">
-              <Button 
-                variant="secondary" 
-                onClick={handleClose} 
+              <Button
+                variant="secondary"
+                onClick={handleClose}
                 className="flex-1 py-4 text-sm tracking-widest uppercase border border-white/10 hover:bg-white/5"
               >
                 Cancel
               </Button>
-              <Button 
-                onClick={handlePrint} 
+              <Button
+                onClick={handlePrint}
                 className="flex-1 py-4 text-sm tracking-widest uppercase bg-gradient-to-r from-[#ea580c] via-[#fdba74] to-[#ea580c] text-[#110820] font-bold hover:brightness-110 shadow-[0_0_20px_rgba(249,115,22,0.4)]"
               >
                 Print Ticket
@@ -63,48 +68,42 @@ export const TerminalCashout = () => {
             </div>
           </div>
         ) : (
-          <div className="text-center animate-in fade-in zoom-in duration-300">
-            <div className="flex justify-center mb-6 relative">
-              <div className="absolute inset-0 bg-[#f97316] blur-[30px] rounded-full opacity-20 animate-pulse"></div>
-              <div className="h-24 w-24 rounded-full bg-gradient-to-b from-[#fdba74] to-[#ea580c] p-[2px] shadow-[0_0_30px_rgba(249,115,22,0.3)]">
-                <div className="w-full h-full bg-[#0a0f1a] rounded-full flex items-center justify-center">
-                  <Receipt size={44} className="text-[#f97316]" />
-                </div>
+          <div className="w-full text-center relative pt-8 pb-4">
+            {/* Top Glow */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-32 bg-[#ea580c]/10 blur-[40px] pointer-events-none rounded-full"></div>
+
+            <div className="flex justify-center mb-6 relative z-10">
+              <div className="h-20 w-20 rounded-full border-[1.5px] border-[#ea580c] flex items-center justify-center">
+                <Receipt size={32} className="text-[#ea580c]" />
               </div>
             </div>
-            <h2 className="text-2xl font-serif text-[#ffedd5] tracking-wide uppercase font-bold mb-8">
-              Ticket Printed Successfully
+            
+            <h2 className="text-xl font-bold text-[#ffedd5] mb-8 uppercase tracking-widest leading-tight">
+              Ticket Printed<br />Successfully
             </h2>
             
-            <div className="bg-[#0a0f1a] rounded-2xl p-6 mb-8 text-left border border-[#f97316]/30 shadow-inner relative">
-              {/* Corner accents */}
-              <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#f97316]/50 rounded-tl-2xl"></div>
-              <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-[#f97316]/50 rounded-tr-2xl"></div>
-              <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#f97316]/50 rounded-bl-2xl"></div>
-              <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#f97316]/50 rounded-br-2xl"></div>
-
-              <div className="flex justify-between items-center mb-4">
-                <span className="text-[#f97316]/60 text-xs font-serif uppercase tracking-widest">Amount</span>
-                <span className="text-3xl font-mono font-black text-white drop-shadow-md">N$ {ticketResult.amount.toFixed(2)}</span>
+            <div className="w-full bg-[#0d1017] border border-[#ea580c]/30 rounded-2xl p-6 mb-8 text-left shadow-inner">
+              <div className="flex justify-between items-center mb-5">
+                <span className="text-[#ea580c]/70 text-[10px] font-bold tracking-[0.15em] uppercase">Amount</span>
+                <span className="text-2xl font-mono font-bold text-white tracking-widest">N$ {ticketResult.amount.toFixed(2)}</span>
               </div>
-              <div className="h-px bg-[#f97316]/20 w-full mb-4 border-dashed border-[#f97316]/30"></div>
+              <div className="h-px bg-white/5 w-full mb-5"></div>
               <div className="flex justify-between items-center">
-                <span className="text-[#f97316]/60 text-xs font-serif uppercase tracking-widest">Ticket Number</span>
-                <span className="text-xl font-mono text-[#fdba74] font-bold tracking-widest">{ticketResult.ticketNumber}</span>
+                <span className="text-[#ea580c]/70 text-[10px] font-bold tracking-[0.15em] uppercase">Ticket Number</span>
+                <span className="text-sm font-mono font-bold text-[#fdba74] tracking-widest uppercase">{ticketResult.ticketNumber}</span>
               </div>
             </div>
             
-            <p className="text-white/50 mb-8 text-[10px] uppercase tracking-[0.15em] leading-relaxed">
-              Take this ticket to the cashier<br/>
-              or scan it on a Terminal in this shop.
+            <p className="text-white/40 mb-8 text-[9px] uppercase tracking-[0.15em] leading-loose px-2">
+              Take this ticket to the cashier<br />or scan it on a terminal in this shop.
             </p>
             
-            <Button 
-              onClick={handleClose} 
-              className="w-full py-4 text-sm tracking-[0.2em] uppercase bg-gradient-to-r from-[#ea580c] via-[#fdba74] to-[#ea580c] text-[#110820] font-bold hover:brightness-110 shadow-[0_0_20px_rgba(249,115,22,0.4)]"
+            <button
+              onClick={handleClose}
+              className="w-full py-4 px-4 bg-gradient-to-b from-[#f97316] to-[#c2410c] text-black font-bold tracking-widest rounded-xl hover:brightness-110 active:scale-[0.98] transition-all uppercase text-sm"
             >
               Okay
-            </Button>
+            </button>
           </div>
         )}
       </Modal>

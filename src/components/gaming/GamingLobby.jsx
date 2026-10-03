@@ -68,7 +68,7 @@ export const GamingLobby = () => {
                 <div className="flex items-center justify-between mb-10">
                   <div className="flex items-center gap-4">
                     <div className="w-1.5 h-8 bg-gradient-to-b from-[#fdba74] to-[#ea580c] rounded-full" />
-                    <h2 className="text-2xl md:text-3xl font-serif text-transparent bg-clip-text bg-gradient-to-r from-[#ffedd5] to-[#f97316] tracking-widest uppercase font-bold drop-shadow-md">
+                    <h2 className="text-2xl md:text-3xl font-sans text-transparent bg-clip-text bg-gradient-to-r from-[#ffedd5] to-[#f97316] tracking-widest uppercase font-bold drop-shadow-md">
                       Popular Games
                     </h2>
                   </div>

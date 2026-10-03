@@ -5,6 +5,7 @@ import { Registration } from './pages/Registration';
 import { RegistrationSuccess } from './pages/RegistrationSuccess';
 import { Gaming } from './pages/Gaming';
 import { SmartPCPreview, TerminalPreview } from './pages/Previews';
+import { PopupShowcase } from './pages/PopupShowcase';
 import { PageContainer } from './components/layout/PageContainer';
 
 function App() {
@@ -12,8 +13,8 @@ function App() {
     <MachineProvider>
       <Router>
         <Routes>
-          <Route path="/" element={<PageContainer><Registration /></PageContainer>} />
-          <Route path="/registration-success" element={<PageContainer><RegistrationSuccess /></PageContainer>} />
+          <Route path="/" element={<Registration />} />
+          <Route path="/registration-success" element={<RegistrationSuccess />} />
           <Route path="/gaming" element={<Gaming />} />
           
           {/* Dev Routes */}
@@ -21,6 +22,7 @@ function App() {
             <>
               <Route path="/smart-pc" element={<SmartPCPreview />} />
               <Route path="/terminal" element={<TerminalPreview />} />
+              <Route path="/popups" element={<PopupShowcase />} />
             </>
           )}
         </Routes>
